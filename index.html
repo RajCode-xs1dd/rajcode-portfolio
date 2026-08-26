@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================= SEO & SOCIAL META TAGS ================= -->
+  <title>RajCode — Rajesh Patra | Software Developer & CS Student</title>
+  <meta name="title" content="RajCode — Rajesh Patra | Software Developer & CS Student" />
+  <meta name="description" content="Official developer platform of Rajesh Patra (RajCode), B.Sc. Computer Science student at Midnapore College (Autonomous), SIH 2025 participant, and creator of 13+ live shipped projects." />
+  <meta name="keywords" content="Rajesh Patra, RajCode, Software Developer, Android Developer, Kotlin, Midnapore College Autonomous, SIH 2025, LeetCode, DITA, Computer Science, Web Development" />
+  <meta name="author" content="Rajesh Patra" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rajcode-portfolio.netlify.app/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rajcode-portfolio.netlify.app/" />
+  <meta property="og:title" content="RajCode — Rajesh Patra | Developer Portfolio" />
+  <meta property="og:description" content="Building tools that matter. Shipping apps that work. Explore 13+ live Android and web applications by Rajesh Patra." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:site_name" content="RajCode" />
+
+  <!-- Twitter / X Meta -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://rajcode-portfolio.netlify.app/" />
+  <meta property="twitter:site" content="@RajeshPatraCS" />
+  <meta property="twitter:creator" content="@RajeshPatraCS" />
+  <meta property="twitter:title" content="RajCode — Rajesh Patra | Developer Portfolio" />
+  <meta property="twitter:description" content="Building tools that matter. Shipping apps that work. Explore 13+ live Android and web applications by Rajesh Patra." />
+  <meta property="twitter:image" content="logo.png" />
+
+  <!-- Google Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rajesh Patra",
+    "alternateName": "RajCode",
+    "url": "https://rajcode-portfolio.netlify.app/",
+    "image": "logo.png",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Midnapore College (Autonomous)"
+      },
+      {
+        "@type": "HighSchool",
+        "name": "Sabang Saradamoyee High School (H.S.)"
+      },
+      {
+        "@type": "HighSchool",
+        "name": "Kundalpal Kiranbala Vidyamandir (High School)"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/RajCode-xs1dd",
+      "https://www.linkedin.com/in/rajesh-patra-0b0913381",
+      "https://x.com/RajeshPatraCS",
+      "https://www.instagram.com/rajcode_official",
+      "https://www.facebook.com/share/179kT8WjZz/"
+    ],
+    "jobTitle": "Software Developer & Computer Science Student",
+    "knowsAbout": ["Android Development", "Kotlin", "JavaScript", "Python", "C++", "Data Structures & Algorithms", "LeetCode"]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#030712',
+              card: '#0b1329',
+              border: '#1e293b',
+              accent: '#6366f1',
+              purple: '#8b5cf6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      background-color: #030712;
+      color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(11, 19, 41, 0.9) 100%);
+      border: 1px solid rgba(30, 41, 59, 0.9);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(129, 140, 248, 0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px -10px rgba(99, 102, 241, 0.22);
+    }
+    
+    .tech-pill {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #c7d2fe;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tech-pill:hover {
+      border-color: #818cf8;
+      background: rgba(49, 46, 129, 0.45);
+      color: #ffffff;
+      transform: translateY(-1.5px) scale(1.04);
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .badge-glow-green {
+      box-shadow: 0 0 10px rgba(52, 211, 153, 0.35);
+      animation: pulseGreen 3s infinite;
+    }
+    .badge-glow-indigo {
+      box-shadow: 0 0 10px rgba(129, 140, 248, 0.35);
+      animation: pulseIndigo 3s infinite;
+    }
+    @keyframes pulseGreen {
+      0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.25); }
+      50% { box-shadow: 0 0 14px rgba(52, 211, 153, 0.55); }
+    }
+    @keyframes pulseIndigo {
+      0%, 100% { box-shadow: 0 0 6px rgba(129, 140, 248, 0.25); }
+      50% { box-shadow: 0 0 14px rgba(129, 140, 248, 0.55); }
+    }
+
+    .modal-backdrop {
+      background-color: rgba(3, 7, 18, 0.85);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #030712; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+  </style>
+</head>
+<body class="selection:bg-indigo-600 selection:text-white relative">
+
+  <!-- Ambient Matrix Canvas Background -->
+  <canvas id="ambient-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-20"></canvas>
+
+  <!-- ================= TOP NAVIGATION ================= -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full ring-2 ring-indigo-500/40 overflow-hidden bg-slate-900 flex items-center justify-center group-hover:scale-105 transition">
+          <img src="logo.png" alt="RajCode Logo" class="w-full h-full object-cover" />
+        </div>
+        <span class="text-lg font-black tracking-wider text-white font-mono group-hover:text-indigo-400 transition">
+          &lt;Raj<span class="text-indigo-500">Code</span> /&gt;
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-indigo-400 transition">About</a>
+        <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+        <a href="#education" class="hover:text-indigo-400 transition">Education</a>
+        <a href="#achievements" class="hover:text-indigo-400 transition">Achievements</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="flex items-center gap-3">
+        <a href="Rajesh_Patra_Resume.PDF" download="Rajesh_Patra_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 bg-slate-900 border border-slate-700 rounded-xl hover:border-indigo-400 hover:text-white transition">
+          <i class="fas fa-file-arrow-down text-indigo-400"></i> CV
+        </a>
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition shadow-lg shadow-indigo-600/30 active:scale-95">
+          Hire Me
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="relative z-10">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6">
+      <div class="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Bio & Hero Info (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Live Badges -->
+          <div class="flex items-center justify-center lg:justify-start flex-wrap gap-2.5">
+            <div class="badge-glow-indigo inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-xs font-semibold text-indigo-400">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+              B.Sc. CS • Midnapore College (Autonomous)
+            </div>
+            <div class="badge-glow-green inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-xs font-medium text-emerald-400">
+              <i class="fas fa-trophy text-amber-400"></i> SIH 2025 Participant
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-800 bg-slate-900/90 text-xs font-mono text-slate-300">
+              <i class="fas fa-code text-orange-400"></i> LeetCode Practitioner
+            </div>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white leading-[1.08]">
+            Build. <span class="gradient-text">Ship.</span> Explore.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            I'm <strong class="text-white font-semibold">Rajesh Patra</strong> — a software developer & CS student creating production-ready Android apps, browser tools, games, and web architectures.
+          </p>
+
+          <!-- Primary Actions -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="#projects" class="px-6 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition shadow-lg shadow-indigo-600/30 flex items-center gap-2 text-sm sm:text-base active:scale-95">
+              Explore Projects <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+            
+            <a href="Rajesh_Patra_Resume.PDF" download="Rajesh_Patra_Resume.pdf" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-100 font-semibold rounded-xl border border-indigo-500/40 hover:border-indigo-400 transition flex items-center gap-2 text-sm sm:text-base active:scale-95 shadow-md">
+              <i class="fas fa-file-pdf text-indigo-400"></i> Download CV
+            </a>
+
+            <a href="https://github.com/RajCode-xs1dd" target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold rounded-xl border border-slate-800 transition flex items-center gap-2 text-sm sm:text-base">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <!-- Social Channels Row with Direct Inline SVGs -->
+          <div class="pt-3 flex justify-center lg:justify-start items-center space-x-6 text-slate-400 text-lg">
+            <!-- GitHub -->
+            <a href="https://github.com/RajCode-xs1dd" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:scale-110 transition flex items-center justify-center" title="GitHub">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/rajesh-patra-0b0913381?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 hover:scale-110 transition flex items-center justify-center" title="LinkedIn">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+
+            <!-- Twitter / X (Crisp SVG) -->
+            <a href="https://x.com/RajeshPatraCS" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:scale-110 transition flex items-center justify-center" title="Twitter / X">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/rajcode_official?igsh=MXdtam15a3hmeHp0OQ==" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 hover:scale-110 transition flex items-center justify-center" title="Instagram">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/179kT8WjZz/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 hover:scale-110 transition flex items-center justify-center" title="Facebook">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:patrarajesh2006@gmail.com" class="hover:text-emerald-400 hover:scale-110 transition flex items-center justify-center" title="Email">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Profile Card (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="glass-card w-full max-w-sm rounded-3xl p-5 space-y-4 border-indigo-500/40 shadow-2xl relative group">
+            
+            <!-- Terminal Header Bar -->
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-1.5">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                <span class="text-[11px] font-mono text-slate-400 ml-2">rajesh_patra.sh</span>
+              </div>
+              
+              <!-- Mode Toggle Button -->
+              <button onclick="togglePortraitMode()" id="toggle-mode-btn" class="px-2.5 py-1 rounded-lg bg-indigo-600/20 border border-indigo-500/40 hover:bg-indigo-600/40 text-[11px] font-mono text-indigo-300 flex items-center gap-1.5 transition active:scale-95 shadow-sm">
+                <i class="fas fa-terminal text-xs"></i> <span id="toggle-btn-label">ASCII Mode</span>
+              </button>
+            </div>
+
+            <!-- View 1: Real Profile Image (image.jpg) -->
+            <div id="normal-portrait-view" class="relative rounded-2xl overflow-hidden aspect-square border border-slate-700 bg-slate-900 group-hover:border-indigo-500/60 transition">
+              <img src="image.jpg" alt="Rajesh Patra" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500" />
+              <div class="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-800 flex items-center justify-between text-xs">
+                <span class="text-slate-200 font-semibold">Rajesh Patra</span>
+                <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                </span>
+              </div>
+            </div>
+
+            <!-- View 2: Live Generated Cyberpunk ASCII Terminal View -->
+            <div id="ascii-portrait-view" class="hidden relative rounded-2xl overflow-hidden aspect-square border border-emerald-500/40 bg-slate-950 p-2 flex flex-col items-center justify-center text-center">
+              <pre id="ascii-canvas-text" class="text-[7px] sm:text-[8px] font-mono leading-[0.6] tracking-tighter text-emerald-400 select-none overflow-hidden"></pre>
+              <div class="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl bg-slate-950/90 border border-emerald-500/40 flex items-center justify-between text-[11px] font-mono text-emerald-300">
+                <span>[ASCII_ACTIVE]</span>
+                <span class="text-slate-400 text-[10px]">Click top-right to reset</span>
+              </div>
+            </div>
+
+            <!-- Card Bottom Meta -->
+            <div class="pt-1 flex items-center justify-between text-xs font-mono text-slate-400">
+              <span>Status: <strong class="text-emerald-400">Available</strong></span>
+              <span>Midnapore, IN</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hidden canvas for image to ASCII pixel sampling -->
+      <canvas id="ascii-hidden-canvas" class="hidden"></canvas>
+    </section>
+
+    <!-- ================= STATS QUAD SECTION ================= -->
+    <section class="max-w-6xl mx-auto px-6 -mt-8 pb-12">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+        <div class="glass-card p-5 rounded-2xl">
+          <div id="stat-repos" class="text-3xl sm:text-4xl font-black text-indigo-400">24</div>
+          <div class="text-xs font-semibold text-slate-400 mt-1">Repositories</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-black text-white">114</div>
+          <div class="text-xs font-semibold text-slate-400 mt-1">Contributions</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-black text-purple-400">4</div>
+          <div class="text-xs font-semibold text-slate-400 mt-1">Netlify Deploys</div>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-black text-emerald-400">100%</div>
+          <div class="text-xs font-semibold text-slate-400 mt-1">Open Source</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-20 px-6 border-t border-slate-800/80 bg-slate-950/60">
+      <div class="max-w-5xl mx-auto space-y-12">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 font-mono">01. About Me</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">I build things that work.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-7 space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
+            <p>
+              I started coding because I wanted to build things that actually worked — not just look good in a slide deck. That obsession with shipping real, usable software is what drives everything on <strong>RajCode</strong>.
+            </p>
+            <p>
+              Currently completing my <strong>B.Sc. in Computer Science (4-Year Honours, 2024–2027)</strong> at <strong>Midnapore College (Autonomous)</strong> with a current cumulative CGPA of <strong>6.5</strong>. I combine rigorous academic foundations with active problem-solving on <strong>LeetCode</strong> and competitive hackathon participation (<strong>SIH 2025</strong>).
+            </p>
+            <p>
+              In addition to formal coursework, I hold a 1-Year <strong>Diploma in Information Technology Application (DITA)</strong> from a certified national computer institute, giving me an extensive background in software fundamentals, tools, and application design.
+            </p>
+          </div>
+
+          <div class="md:col-span-5 glass-card p-6 rounded-3xl space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl overflow-hidden ring-2 ring-indigo-500/40 bg-slate-900 flex items-center justify-center">
+                <img src="logo.png" alt="RajCode" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-base">Rajesh Patra</h3>
+                <p class="text-xs text-indigo-400 font-mono">Software Developer & CS Student</p>
+              </div>
+            </div>
+            <div class="space-y-2 pt-2 text-xs text-slate-300">
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                <span class="text-slate-400">Current College</span>
+                <span class="font-semibold text-slate-200">Midnapore College (Autonomous)</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                <span class="text-slate-400">Academic Score</span>
+                <span class="font-mono text-indigo-400 font-bold">6.5 CGPA (2 Years Done)</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                <span class="text-slate-400">Certification</span>
+                <span class="text-purple-300">DITA (1-Year Certified)</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800">
+                <span class="text-slate-400">Hackathon</span>
+                <span class="text-emerald-400 font-semibold">SIH 2025 Participant</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5">
+                <span class="text-slate-400">Problem Solving</span>
+                <span class="font-mono text-amber-400 font-semibold">Active on LeetCode</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="py-20 px-6 border-t border-slate-800/80">
+      <div class="max-w-5xl mx-auto space-y-10">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 font-mono">02. Capabilities</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Technical Skill Set</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Languages & Problem Solving -->
+          <div class="glass-card p-6 rounded-2xl space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="font-bold text-lg text-white">Languages & DSA</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs">
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Kotlin</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Java</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">C++</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Python</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">JavaScript</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">LeetCode DSA</span>
+            </div>
+          </div>
+
+          <!-- Web & Frameworks -->
+          <div class="glass-card p-6 rounded-2xl space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="font-bold text-lg text-white">Web & Frontend</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs">
+              <span class="tech-pill px-3 py-1.5 rounded-xl">HTML5 & CSS3</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Tailwind CSS</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">React.js</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Bootstrap 5</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">PHP</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Cropper.js</span>
+            </div>
+          </div>
+
+          <!-- Android & Tools -->
+          <div class="glass-card p-6 rounded-2xl space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="font-bold text-lg text-white">Android & Systems</h3>
+            <div class="flex flex-wrap gap-2 font-mono text-xs">
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Android SDK</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">WallpaperService</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Canvas API</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Git & GitHub</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">DITA Certified</span>
+              <span class="tech-pill px-3 py-1.5 rounded-xl">Netlify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMPACT SCANNABLE PROJECTS SECTION ================= -->
+    <section id="projects" class="py-20 px-6 border-t border-slate-800/80 bg-slate-950/60">
+      <div class="max-w-6xl mx-auto space-y-10">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 font-mono">03. Portfolio</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold text-white">Things I’ve Built</p>
+            <p class="text-slate-400 text-sm mt-1">Compact project cards with live launch links and detailed view on click.</p>
+          </div>
+          <span class="text-xs font-mono text-slate-400 self-start md:self-end">Total: <strong class="text-indigo-400 font-bold">13 Shipped Projects</strong></span>
+        </div>
+
+        <!-- Real-Time Search Bar -->
+        <div class="relative w-full">
+          <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+          <input 
+            id="project-search" 
+            type="text" 
+            oninput="handleSearch(this.value)"
+            placeholder="Search all 13 projects by keyword (e.g. Kotlin, Pass, Game, Wallpaper, Birthday, Platform)..." 
+            class="w-full pl-11 pr-4 py-3 rounded-2xl border border-slate-800 bg-slate-900/90 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition font-sans"
+          />
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
+          <div class="flex flex-wrap gap-2" id="filter-container">
+            <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All (13)</button>
+            <button onclick="filterProjects('app')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="app">&lt;/&gt; Apps</button>
+            <button onclick="filterProjects('tool')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="tool">⚡ Tools</button>
+            <button onclick="filterProjects('game')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="game">🎮 Games</button>
+            <button onclick="filterProjects('experiment')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="experiment">🧪 Experiments</button>
+          </div>
+          <div id="project-count" class="text-xs text-slate-400 font-mono">13 projects</div>
+        </div>
+
+        <!-- Compact Project Grid -->
+        <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="no-projects" class="hidden glass-card p-12 rounded-3xl text-center space-y-3">
+          <div class="text-slate-500 text-3xl"><i class="fas fa-folder-open"></i></div>
+          <h4 class="text-lg font-bold text-white">No projects match your query</h4>
+          <p class="text-slate-400 text-sm">Try searching for another keyword or switch category filters.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION & ACADEMIC JOURNEY ================= -->
+    <section id="education" class="py-20 px-6 border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto space-y-10">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 font-mono">04. Academic Background</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Education History</p>
+        </div>
+
+        <div class="space-y-8 border-l-2 border-indigo-500/30 pl-6 ml-3">
+          
+          <!-- College Timeline -->
+          <div class="relative space-y-2">
+            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-slate-950"></div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono text-indigo-400 font-semibold">2024 — 2027 (4-Year Undergraduate Program)</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">Current</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">B.Sc. in Computer Science</h3>
+            <p class="text-slate-300 text-sm font-semibold">Midnapore College (Autonomous)</p>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-indigo-300 font-mono">
+              <i class="fas fa-graduation-cap text-indigo-400"></i> Current CGPA: <strong>6.5</strong> (After 2 Years Completion)
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Focusing on Object-Oriented Architecture (C++/Java/Kotlin), Data Structures & Algorithms, Operating Systems, Computer Networks, and Full-Stack Engineering.
+            </p>
+          </div>
+
+          <!-- Higher Secondary (12th) -->
+          <div class="relative space-y-2">
+            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-purple-500 ring-4 ring-slate-950"></div>
+            <span class="text-xs font-mono text-purple-400 font-semibold">Completed in 2024</span>
+            <h3 class="text-xl font-bold text-white">Higher Secondary (Class 12)</h3>
+            <p class="text-slate-300 text-sm font-semibold">Sabang Saradamoyee High School (H.S.)</p>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">
+              <i class="fas fa-award text-purple-400"></i> Score: <strong>85.00%</strong>
+            </div>
+          </div>
+
+          <!-- Secondary (10th) -->
+          <div class="relative space-y-2">
+            <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-slate-950"></div>
+            <span class="text-xs font-mono text-emerald-400 font-semibold">Completed in 2022</span>
+            <h3 class="text-xl font-bold text-white">Secondary Education (Class 10)</h3>
+            <p class="text-slate-300 text-sm font-semibold">Kundalpal Kiranbala Vidyamandir (High School)</p>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-mono">
+              <i class="fas fa-award text-emerald-400"></i> Score: <strong>84.56%</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS & CERTIFICATIONS ================= -->
+    <section id="achievements" class="py-20 px-6 border-t border-slate-800/80 bg-slate-950/60">
+      <div class="max-w-5xl mx-auto space-y-10">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2 font-mono">05. Milestones</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Achievements & Certifications</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Milestone 1: SIH 2025 -->
+          <div class="glass-card p-6 rounded-2xl space-y-3 border-amber-500/30">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider font-semibold">Hackathon</span>
+            <h3 class="text-lg font-bold text-white">Smart India Hackathon (SIH 2025)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Active participant in SIH 2025, collaborating in fast-paced software problem-solving, rapid prototyping, and system ideation.
+            </p>
+          </div>
+
+          <!-- Milestone 2: DITA Certification -->
+          <div class="glass-card p-6 rounded-2xl space-y-3 border-purple-500/30">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <span class="text-[11px] font-mono text-purple-400 uppercase tracking-wider font-semibold">1-Year Certification</span>
+            <h3 class="text-lg font-bold text-white">DITA Diploma (2024)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Certified Diploma in Information Technology Application from a recognized National Computer Centre, covering full computer application workflows.
+            </p>
+          </div>
+
+          <!-- Milestone 3: LeetCode & Problem Solving -->
+          <div class="glass-card p-6 rounded-2xl space-y-3 border-emerald-500/30">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fas fa-code-merge"></i>
+            </div>
+            <span class="text-[11px] font-mono text-emerald-400 uppercase tracking-wider font-semibold">Competitive DSA</span>
+            <h3 class="text-lg font-bold text-white">LeetCode Practice</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Consistently practicing Data Structures & Algorithms on LeetCode to sharpen algorithmic efficiency, runtime optimization, and logic.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-800/80">
+      <div class="max-w-3xl mx-auto space-y-8">
+        
+        <div class="text-center space-y-3">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 font-mono">06. Get In Touch</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Let’s Build Something Together</p>
+          <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+            Available for select freelance contracts, Android/web projects, and software engineering opportunities.
+          </p>
+        </div>
+
+        <!-- Quick Reach Out Cards with Direct SVG for Twitter/X -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div onclick="copyEmailToClipboard()" class="glass-card p-4 rounded-2xl flex items-center justify-between cursor-pointer group">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Email (Click to copy)</div>
+                <div class="text-xs sm:text-sm font-semibold text-white font-mono group-hover:text-emerald-400 transition">patrarajesh2006@gmail.com</div>
+              </div>
+            </div>
+            <i class="fas fa-copy text-slate-500 group-hover:text-white transition"></i>
+          </div>
+
+          <a href="https://x.com/RajeshPatraCS" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-2xl flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-800 text-white flex items-center justify-center">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Twitter / X</div>
+                <div class="text-xs sm:text-sm font-semibold text-white font-mono group-hover:text-indigo-400 transition">@RajeshPatraCS</div>
+              </div>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square text-slate-500 group-hover:text-white transition"></i>
+          </a>
+        </div>
+
+        <!-- Web3Forms Contact Form -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            <input type="hidden" name="access_key" value="F67ace1c-9109-40cf-82fa-ea4bb4443b88" />
+            <input type="hidden" name="subject" value="New Portfolio Contact via RajCode" />
+            <input type="hidden" name="project_type" id="selected-project-type" value="Web App Development" />
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Name <span class="text-indigo-400">*</span></label>
+              <input required type="text" name="name" placeholder="Your name" class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-900 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm transition" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Email <span class="text-indigo-400">*</span></label>
+              <input required type="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-900 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm transition" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Project Type</label>
+              <div class="flex flex-wrap gap-2" id="project-type-chips">
+                <button type="button" onclick="selectChip(this, 'Web App Development')" class="chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-indigo-500 bg-indigo-600/20 text-indigo-300 transition">Web App</button>
+                <button type="button" onclick="selectChip(this, 'Android App')" class="chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-600 transition">Android App</button>
+                <button type="button" onclick="selectChip(this, 'Tool / Utility')" class="chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-600 transition">Tool / Utility</button>
+                <button type="button" onclick="selectChip(this, 'Freelance / Consulting')" class="chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-600 transition">Freelance</button>
+                <button type="button" onclick="selectChip(this, 'Other')" class="chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-600 transition">Other</button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Message <span class="text-indigo-400">*</span></label>
+              <textarea required name="message" rows="4" placeholder="Tell me about your project, timeline, or idea..." class="w-full px-4 py-3 rounded-xl border border-slate-800 bg-slate-900 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm transition"></textarea>
+            </div>
+
+            <button id="submit-btn" type="submit" class="w-full py-3.5 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition text-sm flex items-center justify-center gap-2 active:scale-98">
+              <span id="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane text-xs"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-12 border-t border-slate-900 text-center space-y-4">
+      <div class="flex justify-center space-x-6 text-slate-400 text-lg">
+        <a href="https://github.com/RajCode-xs1dd" target="_blank" rel="noopener noreferrer" class="hover:text-white transition" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rajesh-patra-0b0913381?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/RajeshPatraCS" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center justify-center" title="Twitter / X">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/rajcode_official?igsh=MXdtam15a3hmeHp0OQ==" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/179kT8WjZz/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:patrarajesh2006@gmail.com" class="hover:text-emerald-400 transition" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="text-xs text-slate-500">© 2026 RajCode (Rajesh Patra). Built with precision. Shipped with purpose.</p>
+    </footer>
+
+  </div>
+
+  <!-- ================= INTERACTIVE PROJECT DETAILS MODAL ================= -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden opacity-0 transition-opacity duration-300">
+    <div class="glass-card w-full max-w-xl rounded-3xl p-6 sm:p-8 space-y-6 border-indigo-500/50 shadow-2xl relative">
+      
+      <!-- Modal Close Button -->
+      <button type="button" onclick="closeProjectModal()" title="Close project details" aria-label="Close project details" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+        <i class="fas fa-times text-xs"></i>
+      </button>
+
+      <!-- Modal Content Area -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2" id="modal-badge-container"></div>
+        <h3 id="modal-title" class="text-2xl font-black text-white"></h3>
+        <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed"></p>
+        
+        <div class="space-y-2 pt-2">
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Technologies Used</div>
+          <div id="modal-tags" class="flex flex-wrap gap-1.5 font-mono text-xs"></div>
+        </div>
+      </div>
+
+      <!-- Modal Action Buttons -->
+      <div class="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition flex items-center gap-2 shadow-md">
+          <span id="modal-action-text">Launch App</span> <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+        <a id="modal-source-link" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-2">
+          <i class="fab fa-github"></i> View GitHub Source
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Alert -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900 border border-emerald-500/40 text-white shadow-2xl backdrop-blur-xl">
+      <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+      <span id="toast-msg" class="text-sm font-semibold text-slate-200">Message sent successfully!</span>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // 13 Full Real Projects Dataset (Item #5 is RajCode — Developer Platform)
+    const projectsData = [
+      {
+        id: 1,
+        title: "Hacker Style Wallpaper",
+        category: "app",
+        categoryLabel: "Apps",
+        badgeIcon: "<i class='fas fa-mobile-alt mr-1'></i>",
+        desc: "A professional Matrix Rain Live Wallpaper for Android. Dynamic character sets (Binary, Hex, Matrix), custom backgrounds, real-time Pro Dashboard, and a theme saving system. Built for performance and low battery impact.",
+        tags: ["Kotlin", "Android", "WallpaperService", "Canvas API"],
+        actionText: "Download APK",
+        actionIcon: "fa-download",
+        appLink: "https://github.com/RajCode-xs1dd/Hacker-Style-Wallpaper/releases/download/v2.0.0/app-debug.apk",
+        sourceLink: "https://github.com/RajCode-xs1dd/Hacker-Style-Wallpaper"
+      },
+      {
+        id: 2,
+        title: "Image Compress Tool",
+        category: "tool",
+        categoryLabel: "Tools",
+        badgeIcon: "<i class='fas fa-bolt mr-1'></i>",
+        desc: "Fast, privacy-friendly browser app to resize, compress, crop, and filter images directly in your browser. 100% client-side with zero uploads, DPI control, and undo/redo.",
+        tags: ["HTML5", "CSS3", "JavaScript", "Cropper.js", "Bootstrap 5"],
+        actionText: "Try It Out",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://rajcode-xs1dd.github.io/image-compress-tool/",
+        sourceLink: "https://github.com/RajCode-xs1dd/image-compress-tool"
+      },
+      {
+        id: 3,
+        title: "Smart Age Calculator Pro",
+        category: "tool",
+        categoryLabel: "Tools",
+        badgeIcon: "<i class='fas fa-bolt mr-1'></i>",
+        desc: "User-friendly smart age calculator that computes exact age, time remaining until your next birthday, and a complete life summary in days, weeks, and hours.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Try It Out",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://rajcode-xs1dd.github.io/smart-age-calculator-pro/",
+        sourceLink: "https://github.com/RajCode-xs1dd/smart-age-calculator-pro"
+      },
+      {
+        id: 4,
+        title: "Birthday Wish",
+        category: "experiment",
+        categoryLabel: "Experiments",
+        badgeIcon: "<i class='fas fa-flask mr-1'></i>",
+        desc: "An interactive birthday wish web experience with custom animations, a unique RajCode typography font, and an engaging multi-page flow.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Explore",
+        actionIcon: "fa-sparkles",
+        appLink: "https://rajcode-xs1dd.github.io/Birthday-wish/",
+        sourceLink: "https://github.com/RajCode-xs1dd/Birthday-wish"
+      },
+      {
+        id: 5,
+        title: "RajCode — Developer Platform",
+        category: "app",
+        categoryLabel: "Apps",
+        badgeIcon: "<i class='fas fa-code mr-1'></i>",
+        desc: "The official web platform and live project hub cataloging real-world applications, tools, games, and systems across Android, Web, and Python.",
+        tags: ["HTML5", "Tailwind CSS", "JavaScript", "Netlify"],
+        actionText: "Launch Hub",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://rajcode.netlify.app/",
+        sourceLink: "https://github.com/RajCode-xs1dd"
+      },
+      {
+        id: 6,
+        title: "Nokia Snake JS",
+        category: "game",
+        categoryLabel: "Games",
+        badgeIcon: "<i class='fas fa-gamepad mr-1'></i>",
+        desc: "Modern remake of the classic Nokia Snake game with three difficulty levels, high score tracking, big food with timer bars, and a Neon Cyber aesthetic.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Play Now",
+        actionIcon: "fa-gamepad",
+        appLink: "https://rajcode-xs1dd.github.io/Snake-Game/",
+        sourceLink: "https://github.com/RajCode-xs1dd/Snake-Game"
+      },
+      {
+        id: 7,
+        title: "Tic Tac Toe",
+        category: "game",
+        categoryLabel: "Games",
+        badgeIcon: "<i class='fas fa-gamepad mr-1'></i>",
+        desc: "Clean Tic Tac Toe game with dual modes: challenge a computer AI or battle a friend in local multiplayer with complete win/loss stat tracking.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Play Now",
+        actionIcon: "fa-gamepad",
+        appLink: "https://rajcode-xs1dd.github.io/Tic-Tac-Toe/",
+        sourceLink: "https://github.com/RajCode-xs1dd/Tic-Tac-Toe"
+      },
+      {
+        id: 8,
+        title: "WishByRaj",
+        category: "experiment",
+        categoryLabel: "Experiments",
+        badgeIcon: "<i class='fas fa-flask mr-1'></i>",
+        desc: "Magic wish generator with 8 visual themes. Features one-click copy and instant WhatsApp personalized greeting share.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Explore",
+        actionIcon: "fa-sparkles",
+        appLink: "https://rajcode-xs1dd.github.io/wishbyraj/",
+        sourceLink: "https://github.com/RajCode-xs1dd/wishbyraj"
+      },
+      {
+        id: 9,
+        title: "BMI Calculator",
+        category: "tool",
+        categoryLabel: "Tools",
+        badgeIcon: "<i class='fas fa-bolt mr-1'></i>",
+        desc: "Clean BMI calculator supporting Metric and Standard units with instantaneous health category classifications (Underweight, Normal, Overweight, Obese).",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Try It Out",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://rajcode-xs1dd.github.io/bmi_calculator/",
+        sourceLink: "https://github.com/RajCode-xs1dd/bmi_calculator"
+      },
+      {
+        id: 10,
+        title: "NeuroZip Game",
+        category: "game",
+        categoryLabel: "Games",
+        badgeIcon: "<i class='fas fa-gamepad mr-1'></i>",
+        desc: "Brain-training number puzzle game. Arrange scrambled numbers in sequence as fast as possible across multiple difficulty levels.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Play Now",
+        actionIcon: "fa-gamepad",
+        appLink: "https://rajcode-xs1dd.github.io/neurozip-game/",
+        sourceLink: "https://github.com/RajCode-xs1dd/neurozip-game"
+      },
+      {
+        id: 11,
+        title: "HBD1 — Birthday Surprise",
+        category: "experiment",
+        categoryLabel: "Experiments",
+        badgeIcon: "<i class='fas fa-flask mr-1'></i>",
+        desc: "Heartfelt birthday reveal experience crafted with sequential step-by-step animations and custom presentation layout.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        actionText: "Explore",
+        actionIcon: "fa-sparkles",
+        appLink: "https://rajcode-xs1dd.github.io/HBD1/",
+        sourceLink: "https://github.com/RajCode-xs1dd/HBD1"
+      },
+      {
+        id: 12,
+        title: "NEXUS 2K26 — Welcome Pass",
+        category: "app",
+        categoryLabel: "Apps",
+        badgeIcon: "<i class='fas fa-id-card mr-1'></i>",
+        desc: "Digital event invitation generator for Midnapore College CS department. Validates student roll numbers & passkeys to download custom invitation passes.",
+        tags: ["HTML", "CSS", "JavaScript", "Netlify"],
+        actionText: "Open App",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://nexus2k26welcome.netlify.app/",
+        sourceLink: "https://github.com/RajCode-xs1dd"
+      },
+      {
+        id: 13,
+        title: "NEXUS 2K26 — Media Vault",
+        category: "app",
+        categoryLabel: "Apps",
+        badgeIcon: "<i class='fas fa-images mr-1'></i>",
+        desc: "Event photo vault for students and faculty with category browsing (Freshers, Cultural, Candid) and direct batch photo uploading.",
+        tags: ["HTML", "CSS", "JavaScript", "Netlify"],
+        actionText: "Open App",
+        actionIcon: "fa-arrow-up-right-from-square",
+        appLink: "https://nexus2k26-media-vault.netlify.app/",
+        sourceLink: "https://github.com/RajCode-xs1dd"
+      }
+    ];
+
+    let currentCategory = 'all';
+    let currentSearchTerm = '';
+    let isAsciiMode = false;
+
+    // Render Compact Project Cards
+    function renderProjects() {
+      const list = document.getElementById('projects-list');
+      const emptyState = document.getElementById('no-projects');
+      
+      let filtered = projectsData;
+      if (currentCategory !== 'all') {
+        filtered = filtered.filter(p => p.category === currentCategory);
+      }
+      if (currentSearchTerm.trim() !== '') {
+        const q = currentSearchTerm.toLowerCase();
+        filtered = filtered.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q)));
+      }
+
+      document.getElementById('project-count').innerText = `${filtered.length} project${filtered.length !== 1 ? 's' : ''}`;
+
+      if (filtered.length === 0) {
+        list.innerHTML = '';
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        list.innerHTML = filtered.map(p => `
+          <div class="glass-card p-5 rounded-2xl flex flex-col justify-between space-y-3">
+            <div class="space-y-2.5">
+              <div class="flex justify-between items-center">
+                <span class="text-[11px] font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/30 px-2 py-0.5 rounded-md">
+                  ${p.badgeIcon} ${p.categoryLabel}
+                </span>
+                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  ● Live
+                </span>
+              </div>
+              <h3 class="text-base font-bold text-white tracking-tight">${p.title}</h3>
+              <p class="text-slate-400 text-xs line-clamp-2 leading-relaxed">${p.desc}</p>
+            </div>
+            
+            <div class="space-y-3 pt-2">
+              <div class="flex flex-wrap gap-1 font-mono text-[10px]">
+                ${p.tags.slice(0, 3).map(t => `<span class="tech-pill px-2 py-0.5 rounded-md">${t}</span>`).join('')}
+                ${p.tags.length > 3 ? `<span class="text-slate-500 text-[10px] self-center">+${p.tags.length - 3}</span>` : ''}
+              </div>
+              
+              <div class="flex items-center justify-between pt-2 border-t border-slate-800/80">
+                <button onclick="openProjectModal(${p.id})" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 transition">
+                  Details <i class="fas fa-eye text-[10px]"></i>
+                </button>
+                <div class="flex items-center gap-3">
+                  <a href="${p.appLink}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-slate-300 hover:text-white transition flex items-center gap-1">
+                    Demo <i class="fas ${p.actionIcon} text-[10px]"></i>
+                  </a>
+                  <a href="${p.sourceLink}" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white transition" title="View Source">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Modal Controller
+    function openProjectModal(id) {
+      const p = projectsData.find(item => item.id === id);
+      if (!p) return;
+
+      document.getElementById('modal-title').innerText = p.title;
+      document.getElementById('modal-desc').innerText = p.desc;
+      document.getElementById('modal-badge-container').innerHTML = `
+        <span class="text-xs font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/30 px-2.5 py-1 rounded-lg">
+          ${p.badgeIcon} ${p.categoryLabel}
+        </span>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+          ● Live Tested
+        </span>
+      `;
+      document.getElementById('modal-tags').innerHTML = p.tags.map(t => `<span class="tech-pill px-2.5 py-1 rounded-lg">${t}</span>`).join('');
+      
+      const liveBtn = document.getElementById('modal-live-link');
+      liveBtn.href = p.appLink;
+      document.getElementById('modal-action-text').innerText = p.actionText;
+
+      const sourceBtn = document.getElementById('modal-source-link');
+      sourceBtn.href = p.sourceLink;
+
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 250);
+    }
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('project-modal');
+      if (e.target === modal) closeProjectModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeProjectModal();
+    });
+
+    function filterProjects(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if(btn.getAttribute('data-filter') === cat) {
+          btn.className = "filter-btn active px-4 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition";
+        } else {
+          btn.className = "filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition";
+        }
+      });
+      renderProjects();
+    }
+
+    function handleSearch(val) {
+      currentSearchTerm = val;
+      renderProjects();
+    }
+
+    function selectChip(btn, type) {
+      document.querySelectorAll('.chip-btn').forEach(b => {
+        b.className = "chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900 text-slate-300 hover:border-slate-600 transition";
+      });
+      btn.className = "chip-btn px-4 py-2 rounded-xl text-xs font-semibold border border-indigo-500 bg-indigo-600/20 text-indigo-300 transition";
+      document.getElementById('selected-project-type').value = type;
+    }
+
+    function copyEmailToClipboard() {
+      navigator.clipboard.writeText("patrarajesh2006@gmail.com").then(() => {
+        showToast("Email copied to clipboard!");
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      t.classList.remove('translate-y-24', 'opacity-0');
+      t.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        t.classList.add('translate-y-24', 'opacity-0');
+        t.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const txt = document.getElementById('btn-text');
+      btn.disabled = true;
+      txt.innerText = "Sending...";
+
+      const formData = new FormData(e.target);
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast("Message sent to Rajesh!");
+          e.target.reset();
+        } else {
+          showToast("Error sending message. Please email directly.");
+        }
+      } catch (err) {
+        showToast("Network error. Please try again.");
+      } finally {
+        btn.disabled = false;
+        txt.innerText = "Send Message";
+      }
+    }
+
+    // Dynamic GitHub Repos Fetcher
+    async function fetchGitHubStats() {
+      try {
+        const res = await fetch('https://api.github.com/users/RajCode-xs1dd');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.public_repos !== undefined) {
+            document.getElementById('stat-repos').innerText = data.public_repos;
+          }
+        }
+      } catch (e) {
+        console.log("GitHub API fallback");
+      }
+    }
+
+    // Dynamic Image to ASCII Converter
+    function generateAsciiArt() {
+      const img = new Image();
+      img.src = 'image.jpg';
+      img.crossOrigin = 'Anonymous';
+      
+      img.onload = () => {
+        const canvas = document.getElementById('ascii-hidden-canvas');
+        const ctx = canvas.getContext('2d');
+        const width = 64;
+        const height = 64;
+        canvas.width = width;
+        canvas.height = height;
+
+        ctx.drawImage(img, 0, 0, width, height);
+        const imgData = ctx.getImageData(0, 0, width, height).data;
+        
+        const chars = '@%#*+=-:. ';
+        let asciiStr = '';
+
+        for (let y = 0; y < height; y += 2) {
+          for (let x = 0; x < width; x++) {
+            const offset = (y * width + x) * 4;
+            const r = imgData[offset];
+            const g = imgData[offset + 1];
+            const b = imgData[offset + 2];
+            const avg = (r + g + b) / 3;
+            const charIndex = Math.floor((avg / 255) * (chars.length - 1));
+            asciiStr += chars[charIndex];
+          }
+          asciiStr += '\n';
+        }
+        document.getElementById('ascii-canvas-text').innerText = asciiStr;
+      };
+    }
+
+    function togglePortraitMode() {
+      const normalView = document.getElementById('normal-portrait-view');
+      const asciiView = document.getElementById('ascii-portrait-view');
+      const btnLabel = document.getElementById('toggle-btn-label');
+      
+      isAsciiMode = !isAsciiMode;
+      
+      if (isAsciiMode) {
+        normalView.classList.add('hidden');
+        asciiView.classList.remove('hidden');
+        btnLabel.innerText = "Photo Mode";
+        generateAsciiArt();
+      } else {
+        asciiView.classList.add('hidden');
+        normalView.classList.remove('hidden');
+        btnLabel.innerText = "ASCII Mode";
+      }
+    }
+
+    // Ambient Matrix Canvas Animation
+    const canvas = document.getElementById('ambient-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const chars = '01RAJCODE<>/;{}=+*';
+    const fontSize = 14;
+    let columns = Math.floor(width / fontSize);
+    let drops = Array(columns).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(3, 7, 18, 0.08)';
+      ctx.fillRect(0, 0, width, height);
+      ctx.fillStyle = '#6366f1';
+      ctx.font = `${fontSize}px monospace`;
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > height && Math.random() > 0.985) drops[i] = 0;
+        drops[i]++;
+      }
+    }
+    setInterval(drawMatrix, 50);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      columns = Math.floor(width / fontSize);
+      drops = Array(columns).fill(1);
+    });
+
+    renderProjects();
+    fetchGitHubStats();
+  </script>
+</body>
+</html>
+    
