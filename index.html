@@ -360,7 +360,7 @@
           <div class="text-xs font-semibold text-slate-400 mt-1">Contributions</div>
         </div>
         <div class="glass-card p-5 rounded-2xl">
-          <div class="text-3xl sm:text-4xl font-black text-purple-400">4</div>
+          <div class="text-3xl sm:text-4xl font-black text-purple-400">10</div>
           <div class="text-xs font-semibold text-slate-400 mt-1">Netlify Deploys</div>
         </div>
         <div class="glass-card p-5 rounded-2xl">
@@ -498,7 +498,7 @@
             <p class="text-3xl sm:text-4xl font-extrabold text-white">Things I’ve Built</p>
             <p class="text-slate-400 text-sm mt-1">Compact project cards with live launch links and detailed view on click.</p>
           </div>
-          <span class="text-xs font-mono text-slate-400 self-start md:self-end">Total: <strong class="text-indigo-400 font-bold">13 Shipped Projects</strong></span>
+          <span class="text-xs font-mono text-slate-400 self-start md:self-end">Total: <strong class="text-indigo-400 font-bold">14 Shipped Projects</strong></span>
         </div>
 
         <!-- Real-Time Search Bar -->
@@ -508,7 +508,7 @@
             id="project-search" 
             type="text" 
             oninput="handleSearch(this.value)"
-            placeholder="Search all 13 projects by keyword (e.g. Kotlin, Pass, Game, Wallpaper, Birthday, Platform)..." 
+            placeholder="Search all 14 projects by keyword (e.g. Kotlin, Pass, Game, Wallpaper, Birthday, Platform)..." 
             class="w-full pl-11 pr-4 py-3 rounded-2xl border border-slate-800 bg-slate-900/90 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition font-sans"
           />
         </div>
@@ -516,13 +516,13 @@
         <!-- Filter Category Tabs -->
         <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
           <div class="flex flex-wrap gap-2" id="filter-container">
-            <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All (13)</button>
+            <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 rounded-xl text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">All (14)</button>
             <button onclick="filterProjects('app')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="app">&lt;/&gt; Apps</button>
             <button onclick="filterProjects('tool')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="tool">⚡ Tools</button>
             <button onclick="filterProjects('game')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="game">🎮 Games</button>
             <button onclick="filterProjects('experiment')" class="filter-btn px-4 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition" data-filter="experiment">🧪 Experiments</button>
           </div>
-          <div id="project-count" class="text-xs text-slate-400 font-mono">13 projects</div>
+          <div id="project-count" class="text-xs text-slate-400 font-mono">14 projects</div>
         </div>
 
         <!-- Compact Project Grid -->
@@ -788,7 +788,7 @@
 
   <!-- ================= JAVASCRIPT ================= -->
   <script>
-    // 13 Full Real Projects Dataset (Item #5 is RajCode — Developer Platform)
+    // 14 Full Real Projects Dataset (Item #5 is RajCode — Developer Platform)
     const projectsData = [
       {
         id: 1,
@@ -805,16 +805,16 @@
       },
       {
         id: 2,
-        title: "Image Compress Tool",
+        title: "PixelCraft – Browser-Based Image Suite",
         category: "tool",
         categoryLabel: "Tools",
         badgeIcon: "<i class='fas fa-bolt mr-1'></i>",
-        desc: "Fast, privacy-friendly browser app to resize, compress, crop, and filter images directly in your browser. 100% client-side with zero uploads, DPI control, and undo/redo.",
+        desc: "A comprehensive, studio-grade image processing platform built with a 100% client-side architecture. Features bulk compression, precise cropping, format conversion (JPG, PNG, WEBP), and a full-featured photo editor with zero server uploads and complete user data privacy.",
         tags: ["HTML5", "CSS3", "JavaScript", "Cropper.js", "Bootstrap 5"],
         actionText: "Try It Out",
         actionIcon: "fa-arrow-up-right-from-square",
-        appLink: "https://rajcode-xs1dd.github.io/image-compress-tool/",
-        sourceLink: "https://github.com/RajCode-xs1dd/image-compress-tool"
+        appLink: "https://pixelcraft-rajcode.netlify.app/",
+        sourceLink: "https://github.com/RajCode-xs1dd/PixelCraft"
       },
       {
         id: 3,
@@ -922,6 +922,19 @@
       },
       {
         id: 11,
+        title: "MindFlip - Visual Memory Puzzle Game",
+        category: "game",
+        categoryLabel: "Games",
+        badgeIcon: "<i class='fas fa-gamepad mr-1'></i>",
+        desc: "A responsive browser-based memory challenge game. Features Solo, Two-Player, AI opponent, and progressive Daily modes optimized for mobile and desktop.",
+        tags: ["JavaScript (ES6+), Tailwind CSS, HTML5, Web Audio API, LocalStorage"],
+        actionText: "Play Now",
+        actionIcon: "fa-gamepad",
+        appLink: "https://mindflip-game.netlify.app/",
+        sourceLink: "https://github.com/RajCode-xs1dd/MindFlip"
+      },
+      {
+        id: 12,
         title: "HBD1 — Birthday Surprise",
         category: "experiment",
         categoryLabel: "Experiments",
@@ -934,7 +947,7 @@
         sourceLink: "https://github.com/RajCode-xs1dd/HBD1"
       },
       {
-        id: 12,
+        id: 13,
         title: "NEXUS 2K26 — Welcome Pass",
         category: "app",
         categoryLabel: "Apps",
@@ -947,7 +960,7 @@
         sourceLink: "https://github.com/RajCode-xs1dd"
       },
       {
-        id: 13,
+        id: 14,
         title: "NEXUS 2K26 — Media Vault",
         category: "app",
         categoryLabel: "Apps",
